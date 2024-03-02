@@ -27,6 +27,9 @@ public class Tissue {
                }
 
             }
+            else{
+                idList.add(currentCell.getTracker().getID());
+            }
 
         }
         for(Integer ridID: idList){
