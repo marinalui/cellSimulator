@@ -11,12 +11,26 @@ public class Tissue {
         }
     }
     public void execute(int timePassed){
-        for(Cell currentCell: baseCells){
-//Cell.execute(timePassed);
-           // if (Cell.getAge()<60){
-            // baseCells.remove(currentCell);
-            // }
+        ArrayList<Integer> idList = new ArrayList<Integer>();
+        int parent_size = baseCells.size();
+        for(int i=0;i<parent_size;i++){
 
+            Cell currentCell = baseCells.get(i);
+
+            //after the cell exeutes, if the cell is in mitosis
+            if(currentCell.execute(timePassed)){
+               if(currentCell.getPhase()==Phases.M){
+                   idList.add(currentCell.getTracker().getID());
+                   boolean cancer= currentCell.getTracker().getCancerous();
+                   baseCells.add(new Cell(cancer));
+                   baseCells.add(new Cell(cancer));
+               }
+
+            }
+
+        }
+        for(Integer ridID: idList){
+            baseCells.removeIf(n-> (n.getTracker().getID()==ridID));
         }
     }
 
@@ -31,4 +45,5 @@ public class Tissue {
         thisTissue.execute(time);
 
     }
+
 }
