@@ -10,8 +10,19 @@ public class Tracker {
         ID = IDNum;
         IDNum += 1;
     }
+    public int getAge(){
+        return age;
+    }
+    public int getID(){
+        return ID;
+    }
+    public boolean getCancerous(){
+        return cancerous;
+    }
     public void updateAge(int amount){
         age += amount;
     }
 
+
 }
+
