@@ -1,3 +1,3 @@
 public class Checkpoint {
-    public Checkpoint(Phases){}
+    public Checkpoint(Phases phase){}
 }
