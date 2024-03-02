@@ -7,11 +7,15 @@ public class Checkpoint {
     public boolean test(Cell currentCell){
         this.currentCell = currentCell;
         phase = this.currentCell.getPhase();
-        if (phase==phase.G1){
+        if (phase==Phases.G1){
+            return true;
+        } else if(phase==Phases.G2){
+            return true;
+        } else if(phase == Phases.M){
             return true;
         }
-        else if(phase==phase.G2){return true;}
         else {return false;}
 
     }
+
 }

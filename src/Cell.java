@@ -13,10 +13,8 @@ public class Cell{
             phase = Phases.S;
         } else if (Phases.S.getTime()<age && age <=Phases.G2.getTime()){
             phase = Phases.G2;
-        } else if (Phases.G2.getTime()<age && age <=Phases.M.getTime()) {
+        } else if (Phases.G2.getTime()<age) {
             phase = Phases.M;
-        }else{
-            System.out.println("Age is out of bounds");
         }
     }
     public Tracker getTracker(){
@@ -25,13 +23,23 @@ public class Cell{
     public Phases getPhase(){
         return phase;
     }
-    //TODO
-    public void execute(int time){
-       tracker.updateAge(time);
-       Phases previousPhase = phase;
-       determinePhase(tracker.getAge());
-       if(phase==Phases.G1&&previousPhase!= Phases.G1){
 
-       }
+    /**
+     * updates the cells phase
+     * @param time
+     * @return if the cell passed the checkpoint, if false it should get deleted later
+     */
+    public boolean execute(int time){
+        boolean result=true;
+        tracker.updateAge(time);
+        Phases previousPhase = phase;
+        determinePhase(tracker.getAge());
+        Checkpoint checkpoint = new Checkpoint();
+        if(previousPhase!= phase&& phase!=Phases.S){
+           if (!checkpoint.test(this)){
+               result = false;
+           }
+        }
+        return result;
     }
 }
