@@ -11,12 +11,20 @@ public class Tissue {
         }
     }
     public void execute(int timePassed){
-        for(Cell currentCell: baseCells){}
+        for(Cell currentCell: baseCells){
+
+        }
     }
 
     public static void main(String[] args) {
+
         Scanner in = new Scanner(System.in);
-        System.out.print("How many base cells would you like?");
+        System.out.print("How many base cells would you like?: ");
+        int num = in.nextInt();
+        Tissue thisTissue = new Tissue(num);
+        System.out.print("How much time has passed?: ");
+        int time = in.nextInt();
+        thisTissue.execute(time);
 
     }
 }
