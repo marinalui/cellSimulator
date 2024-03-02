@@ -12,6 +12,10 @@ public class Tissue {
     }
     public void execute(int timePassed){
         for(Cell currentCell: baseCells){
+//Cell.execute(timePassed);
+           // if (Cell.getAge()<60){
+            // baseCells.remove(currentCell);
+            // }
 
         }
     }
