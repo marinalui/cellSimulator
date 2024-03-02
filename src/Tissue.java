@@ -1,7 +1,8 @@
 import java.util.ArrayList;
 import java.util.Scanner;
-
 public class Tissue {
+
+
     private ArrayList<Cell> baseCells;
     public Tissue(int baseCellNum){
         baseCells = new ArrayList<Cell>();
