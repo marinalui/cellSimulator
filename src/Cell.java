@@ -6,6 +6,10 @@ public class Cell{
         tracker = new Tracker();
         determinePhase(tracker.getAge());
     }
+    public Cell(boolean cancerous){
+        tracker = new Tracker(cancerous);
+        determinePhase(tracker.getAge());
+    }
     public void determinePhase(int age){
         if (0<=age && age<=Phases.G1.getTime()){
             phase = Phases.G1;
