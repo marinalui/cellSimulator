@@ -2,7 +2,7 @@ import java.util.HashSet;
 
 public class Checkpoint {
     public enum Mutations{
-        NO_RESOURCES, DNA_ERROR,CHROMOSONE_MISALIGNED;
+        NO_RESOURCES, DNA_ERROR,CHROMOSOME_MISALIGNED;
 
     }
     private Phases phase;
@@ -26,7 +26,7 @@ public class Checkpoint {
             }
             return true;
         } else if(phase == Phases.M){
-            if(currentCell.getMutationStatus().get(Mutations.CHROMOSONE_MISALIGNED)){
+            if(currentCell.getMutationStatus().get(Mutations.CHROMOSOME_MISALIGNED)){
                 return false;
             }
             return true;

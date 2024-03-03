@@ -7,10 +7,14 @@ public class Cell{
     public Cell(){
         tracker = new Tracker();
         determinePhase(tracker.getAge());
+        mutationStatus.put(Checkpoint.Mutations.NO_RESOURCES,false);
+        mutationStatus.put(Checkpoint.Mutations.DNA_ERROR,false);
+        mutationStatus.put(Checkpoint.Mutations.CHROMOSOME_MISALIGNED,false);
     }
-    public Cell(boolean cancerous){
+    public Cell(boolean cancerous, HashMap<Checkpoint.Mutations, Boolean> mutationStatus){
         tracker = new Tracker(cancerous);
         determinePhase(tracker.getAge());
+        this.mutationStatus = mutationStatus;
     }
     public void determinePhase(int age){
         if (0<=age && age<=Phases.G1.getTime()){
@@ -33,7 +37,21 @@ public class Cell{
         return mutationStatus;
     }
     public void updateMutationStatus(){
-        //for()
+       for(Map.Entry<Checkpoint.Mutations, Boolean> set: mutationStatus.entrySet()){
+           Random rand = new Random();
+           int chance1 = rand.nextInt(100);
+           int chance2 = rand.nextInt(100);
+           int chance3 = rand.nextInt(100);
+           if(chance1 == 1){
+               mutationStatus.put(Checkpoint.Mutations.NO_RESOURCES, true);
+           }
+           if(chance2 == 1){
+               mutationStatus.put(Checkpoint.Mutations.DNA_ERROR, true);
+           }
+           if(chance3 == 1){
+               mutationStatus.put(Checkpoint.Mutations.CHROMOSOME_MISALIGNED, true);
+           }
+       }
     }
     /**
      * updates the cells phase
@@ -51,6 +69,7 @@ public class Cell{
                result = false;
            }
         }
+        updateMutationStatus();
         return result;
     }
     public void display(){

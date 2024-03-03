@@ -22,8 +22,8 @@ public class Tissue {
                if(currentCell.getPhase()==Phases.M){
                    idList.add(currentCell.getTracker().getID());
                    boolean cancer= currentCell.getTracker().getCancerous();
-                   baseCells.add(new Cell(cancer));
-                   baseCells.add(new Cell(cancer));
+                   baseCells.add(new Cell(cancer, currentCell.getMutationStatus()));
+                   baseCells.add(new Cell(cancer,currentCell.getMutationStatus()));
                }
             }
             else{
