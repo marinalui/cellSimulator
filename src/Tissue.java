@@ -87,7 +87,7 @@ public class Tissue {
                 curCycle += rounds-(double)cycle;
                 thisTissue.display(curCycle);
             }
-            rounds = 0;
+
                         System.out.println("To see the cells duplicate again, for the same amount of time, press any key.");
             System.out.print("If you want to exit, click [1] and press [Enter]");
             String close = in.next();
