@@ -45,7 +45,10 @@ public class Tissue {
         Tissue thisTissue = new Tissue(num);
         System.out.print("How much time has passed?: ");
         int time = in.nextInt();
-        thisTissue.execute(time);
+        int rounds = time/60;
+        for(int i=0;i<rounds;i++) {
+            thisTissue.execute(time);
+        }
 
     }
 

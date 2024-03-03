@@ -53,4 +53,18 @@ public class Cell{
         }
         return result;
     }
+    public void display(){
+
+        if (this.getTracker().getCancerous()) {
+            System.out.print("{");
+            System.out.print("C");
+            System.out.print("}");
+        }
+        else{
+            System.out.print("[");
+            System.out.print(this.getPhase());
+            System.out.print("]");
+        }
+
+    }
 }
