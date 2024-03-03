@@ -38,8 +38,10 @@ public class Tissue {
     }
     public void display(int roundNum){
         System.out.println("Current Round Number: "+ roundNum);
+        System.out.println("Current Cell Arrays:");
         for(int i=0; i<baseCells.size();i++){
             baseCells.get(i).display();
+            System.out.print("   ");
             if(i%4==0&&i!=0){
                 System.out.println();
             }
