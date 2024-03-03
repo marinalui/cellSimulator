@@ -66,6 +66,7 @@ public class Tissue {
         double rounds = (double)time / 60;
         /*how many full cycles we will pass*/
         int cycle = time / 60;
+        /*what cycles the display is on changes as the user has pressed enter*/
         double curCycle=0;
 
 
@@ -81,10 +82,10 @@ public class Tissue {
             }
             if(cycle<rounds){
                 thisTissue.execute(time%60);
-                curCycle += rounds-curCycle;
+                curCycle += rounds-(double)cycle;
                 thisTissue.display(curCycle);
             }
-
+            rounds = 0;
                         System.out.println("To see the cells duplicate again, for the same amount of time, press any key.");
             System.out.print("If you want to exit, click [1] and press [Enter]");
             String close = in.next();

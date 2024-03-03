@@ -38,7 +38,7 @@ public class Checkpoint {
         }
         if(phase == Phases.G0){
             int age = currentCell.getTracker().getAge();
-            if(age >=90){
+            if(age >= 0){
                 phase = Phases.G1;
                 age = 0;
             }

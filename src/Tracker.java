@@ -7,10 +7,13 @@ public class Tracker {
     //base cells constructor
     public Tracker(){
         Random rand = new Random();
-        age = rand.nextInt(-1,61);//comment  for test, set this age = 60
+        age = -1;//rand.nextInt(-1,50);//comment  for test, set this age = 60
         ID = IDNum;
         IDNum += 1;
         cancerous = false;
+        if (age == -1){
+            age = -90;
+        }
     }
     //daughter cells constructor
     public Tracker(boolean cancerous,int baseAge){

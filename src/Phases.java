@@ -1,5 +1,5 @@
 public enum Phases {
-    G1(20), S(35),G2(50), M(60),G0(-1);
+    G1(20), S(35),G2(50), M(60),G0(-90);
     private final int timePeriod;
     private Phases( int timePeriod){
         this.timePeriod= timePeriod;

@@ -26,7 +26,7 @@ public class Cell{
             phase = Phases.G2;
         } else if (Phases.G2.getTime()<age) {
             phase = Phases.M;
-        } else if (Phases.G0.getTime() == age){
+        } else if (Phases.G0.getTime() <=age){
             phase = Phases.G0;
         }
     }
