@@ -94,6 +94,8 @@ public class Tissue {
             if (close.equals("1")) {
                 break;
             }
+            rounds=rounds+rounds;
+            cycle=(int)rounds;
         }
     }
 }
