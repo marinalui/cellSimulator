@@ -1,0 +1,97 @@
+How many base cells would you like?: 3
+How much time has passed?: 90
+CYCLES: 0.0
+Current Cell Arrays:
+[G1 - 0]   [M - 1]   [G2 - 2]
+
+[G1 - 0]- Age:8
+[M - 1]- Age:60
+[G2 - 2]- Age:36
+‧͙⁺˚*･༓☾ LOOK AT THE MAGIC HAPPEN!!! ☽༓･*˚⁺‧͙
+CYCLES: 1.0
+Current Cell Arrays:
+[G1 - 3]   [G1 - 4]   [G1 - 5]   [G1 - 6]   [G2 - 7]
+[G2 - 8]
+
+[G1 - 3]- Age:18
+[G1 - 4]- Age:18
+[G1 - 5]- Age:20
+[G1 - 6]- Age:20
+[G2 - 7]- Age:46
+[G2 - 8]- Age:46
+CYCLES: 1.5
+Current Cell Arrays:
+[G2 - 3]   [G2 - 4]   [G2 - 5]   [G2 - 6]   {C - 9}
+{C - 10}   {C - 11}   {C - 12}
+
+[G2 - 3]- Age:48
+[G2 - 4]- Age:48
+[G2 - 5]- Age:50
+[G2 - 6]- Age:50
+{C - 9}- Age:26
+{C - 10}- Age:26
+{C - 11}- Age:26
+{C - 12}- Age:26
+To see the cells duplicate again, for the same amount of time, press any key.
+If you want to exit, click [1] and press [Enter]y
+
+
+‧͙⁺˚*･༓☾ LOOK AT THE MAGIC HAPPEN!!! ☽༓･*˚⁺‧͙
+CYCLES: 1.0
+Current Cell Arrays:
+[G1 - 13]   [G1 - 14]   [G1 - 15]   [G1 - 16]   [G1 - 17]
+[G1 - 18]   [G1 - 19]   [G1 - 20]   {C - 21}
+{C - 22}   {C - 23}   {C - 24}   {C - 25}
+{C - 26}   {C - 27}   {C - 28}
+
+[G1 - 13]- Age:8
+[G1 - 14]- Age:8
+[G1 - 15]- Age:8
+[G1 - 16]- Age:8
+[G1 - 17]- Age:10
+[G1 - 18]- Age:10
+[G1 - 19]- Age:10
+[G1 - 20]- Age:10
+{C - 21}- Age:36
+{C - 22}- Age:36
+{C - 23}- Age:36
+{C - 24}- Age:36
+{C - 25}- Age:36
+{C - 26}- Age:36
+{C - 27}- Age:36
+{C - 28}- Age:36
+CYCLES: 1.5
+Current Cell Arrays:
+[G2 - 13]   [G2 - 14]   [G2 - 15]   [G2 - 16]   [G2 - 17]
+[G2 - 18]   [G2 - 19]   [G2 - 20]   {C - 29}
+{C - 30}   {C - 31}   {C - 32}   {C - 33}
+{C - 34}   {C - 35}   {C - 36}   {C - 37}
+{C - 38}   {C - 39}   {C - 40}   {C - 41}
+{C - 42}   {C - 43}   {C - 44}
+
+[G2 - 13]- Age:38
+[G2 - 14]- Age:38
+[G2 - 15]- Age:38
+[G2 - 16]- Age:38
+[G2 - 17]- Age:40
+[G2 - 18]- Age:40
+[G2 - 19]- Age:40
+[G2 - 20]- Age:40
+{C - 29}- Age:16
+{C - 30}- Age:16
+{C - 31}- Age:16
+{C - 32}- Age:16
+{C - 33}- Age:16
+{C - 34}- Age:16
+{C - 35}- Age:16
+{C - 36}- Age:16
+{C - 37}- Age:16
+{C - 38}- Age:16
+{C - 39}- Age:16
+{C - 40}- Age:16
+{C - 41}- Age:16
+{C - 42}- Age:16
+{C - 43}- Age:16
+{C - 44}- Age:16
+To see the cells duplicate again, for the same amount of time, press any key.
+If you want to exit, click [1] and press [Enter]
