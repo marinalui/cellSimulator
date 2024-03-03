@@ -52,17 +52,18 @@ public class Tissue {
         Tissue thisTissue = new Tissue(num);
         System.out.print("How much time has passed?: ");
         int time = in.nextInt();
-        int rounds = time / 60;
+        double rounds = time / 60;
         int curRounds = 0;
         while (true) {
             System.out.println("‧͙⁺˚*･༓☾ LOOK AT THE MAGIC HAPPEN!!! ☽༓･*˚⁺‧͙");
             thisTissue.display(curRounds);
             for (int i = 0; i < rounds; i++) {
                 curRounds++;
-                thisTissue.execute(time);
+                thisTissue.execute(60);
                 thisTissue.display(curRounds);
 
             }
+            if()
             System.out.println("To see the cells duplicate again, for the same amount of time, press any key.");
             System.out.print("If you want to exit, click [1] and press [Enter]");
             String close = in.next();
