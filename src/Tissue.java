@@ -28,10 +28,11 @@ public class Tissue {
                    baseCells.add(new Cell(cancer, currentCell.getMutationStatus(),(currentCell.getTracker().getAge())-50));
                    baseCells.add(new Cell(cancer,currentCell.getMutationStatus(),(currentCell.getTracker().getAge())-50));
                }
+               else if(currentCell.getPhase()!=Phases.G0){
+                   idList.add(currentCell.getTracker().getID());
+               }
             }
-            else if(currentCell.getPhase()!=Phases.G0){
-                idList.add(currentCell.getTracker().getID());
-            }
+
         }
         for(Integer ridID: idList){
             baseCells.removeIf(n-> (n.getTracker().getID()==ridID));
