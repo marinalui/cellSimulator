@@ -22,6 +22,7 @@ public class Checkpoint {
         if (phase==Phases.G1){
             if(currentCell.getMutationStatus().get(Mutations.NO_RESOURCES)){
                 phase = Phases.G0;
+                currentCell.getMutationStatus().put(Mutations.NO_RESOURCES, false);
                 result = false;
             }
         } else if(phase==Phases.G2){
