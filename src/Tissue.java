@@ -62,7 +62,6 @@ public class Tissue {
             for (int i = 0; i < cycle; i++) {
                 thisTissue.execute(60);
                 thisTissue.display(cycle);
-                thisTissue.display(cycle);
             }
             if(cycle<rounds){
                 thisTissue.execute(time%60);

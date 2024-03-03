@@ -57,7 +57,7 @@ public class Cell{
        }
     }
     /**
-     * updates the cells phase
+     * updates the cells phase, age, if it passes checkpoint
      * @param time
      * @return if the cell passed the checkpoint, if false it should get deleted later
      */
