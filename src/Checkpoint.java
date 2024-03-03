@@ -1,5 +1,9 @@
-import java.util.HashSet;
-
+/**
+ * Checks at G1, G2, and Mitosis checkpoint
+ *
+ * @author Marina Lui
+ * @author Ashley Miller
+ */
 public class Checkpoint {
     public enum Mutations{
         NO_RESOURCES, DNA_ERROR,CHROMOSOME_MISALIGNED;

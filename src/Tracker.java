@@ -1,3 +1,9 @@
+/**
+ * Keeps tabs on the variables for a cell. Gets created with each Cell.java constructor call.
+ * @author Marina Lui
+ * @author Ashley Miller
+ */
+
 import java.util.Random;
 public class Tracker {
     private int age;
