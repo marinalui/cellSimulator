@@ -34,7 +34,5 @@ public class Tracker {
     public void updateCancerous(){
         cancerous = true;
     }
-
-
 }
 
