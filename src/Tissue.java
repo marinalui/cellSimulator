@@ -72,10 +72,6 @@ public class Tissue {
         if (close.equals("1")){
         break;
         }
-        }
-
-
-
-
     }
+}
 }

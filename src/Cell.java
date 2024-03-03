@@ -25,6 +25,8 @@ public class Cell{
             phase = Phases.G2;
         } else if (Phases.G2.getTime()<age) {
             phase = Phases.M;
+        } else if (Phases.G0.getTime() == age){
+            phase = Phases.G0;
         }
     }
     public Tracker getTracker(){
@@ -40,9 +42,9 @@ public class Cell{
        for(Map.Entry<Checkpoint.Mutations, Boolean> set: mutationStatus.entrySet()){
            Random rand = new Random();
            //can update with relevant chances of mutation in future development
-           int chance1 = rand.nextInt(10);
-           int chance2 = rand.nextInt(10);
-           int chance3 = rand.nextInt(10);
+           int chance1 = rand.nextInt(50);
+           int chance2 = rand.nextInt(50);
+           int chance3 = rand.nextInt(50);
            if(chance1 == 1){
                mutationStatus.put(Checkpoint.Mutations.NO_RESOURCES, true);
            }
