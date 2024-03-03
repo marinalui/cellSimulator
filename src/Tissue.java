@@ -31,8 +31,9 @@ public class Tissue {
             baseCells.removeIf(n-> (n.getTracker().getID()==ridID));
         }
     }
-    public void display(int roundNum){
+    public void display(int roundNum, double cycle){
         System.out.println("ROUND: "+ roundNum);
+        System.out.println("CYCLES: "+ cycle);
         System.out.println("Current Cell Arrays:");
         for(int i=0; i<baseCells.size();i++){
             baseCells.get(i).display();
@@ -52,15 +53,17 @@ public class Tissue {
         Tissue thisTissue = new Tissue(num);
         System.out.print("How much time has passed?: ");
         int time = in.nextInt();
-        int rounds = time / 60;
+        /*how many full cycles have passed*/
+        int cycle = time / 60;
+        /*how many times the user has pressed enter*/
         int curRounds = 0;
         while (true) {
             System.out.println("‧͙⁺˚*･༓☾ LOOK AT THE MAGIC HAPPEN!!! ☽༓･*˚⁺‧͙");
-            thisTissue.display(curRounds);
-            for (int i = 0; i < rounds; i++) {
+            thisTissue.display(curRounds,cycle);
+            for (int i = 0; i < cycle; i++) {
                 curRounds++;
                 thisTissue.execute(time);
-                thisTissue.display(curRounds);
+                thisTissue.display(curRounds,cycle);
 
             }
             System.out.println("To see the cells duplicate again, for the same amount of time, press any key.");
