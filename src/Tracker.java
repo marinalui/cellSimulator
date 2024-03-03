@@ -7,14 +7,15 @@ public class Tracker {
     //base cells constructor
     public Tracker(){
         Random rand = new Random();
-        age = rand.nextInt(-1,61);
+        age = rand.nextInt(-1,61);//comment  for test, set this age = 60
         ID = IDNum;
         IDNum += 1;
         cancerous = false;
     }
     //daughter cells constructor
-    public Tracker(boolean cancerous){
-        age = 0;
+    public Tracker(boolean cancerous,int baseAge){
+        //base age is the beginning age of cell, if parent is over 60 when goes through mitosis
+        age = baseAge;
         ID = IDNum;
         IDNum += 1;
         this.cancerous = cancerous;
