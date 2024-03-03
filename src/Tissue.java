@@ -36,6 +36,17 @@ public class Tissue {
             baseCells.removeIf(n-> (n.getTracker().getID()==ridID));
         }
     }
+    public void display(int roundNum){
+        System.out.println("Current Round Number: "+ roundNum);
+        for(int i=0; i<baseCells.size();i++){
+            baseCells.get(i).display();
+            if(i%4==0&&i!=0){
+                System.out.println();
+            }
+        }
+        System.out.print(System.lineSeparator());
+        System.out.print(System.lineSeparator());
+    }
 
     public static void main(String[] args) {
 
@@ -46,8 +57,10 @@ public class Tissue {
         System.out.print("How much time has passed?: ");
         int time = in.nextInt();
         int rounds = time/60;
+        thisTissue.display(0);
         for(int i=0;i<rounds;i++) {
             thisTissue.execute(time);
+            thisTissue.display(rounds);
         }
 
     }
