@@ -60,7 +60,5 @@ public class Tissue {
             thisTissue.execute(time);
             thisTissue.display(rounds);
         }
-
-
     }
 }
