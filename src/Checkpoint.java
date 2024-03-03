@@ -19,7 +19,9 @@ public class Checkpoint {
         boolean result = true;
         this.currentCell = currentCell;
         phase = this.currentCell.getPhase();
-        if (phase==Phases.G1){
+        if(currentCell.getTracker().getCancerous()){
+            result = true;
+        } else if (phase==Phases.G1){
             if(currentCell.getMutationStatus().get(Mutations.NO_RESOURCES)){
                 phase = Phases.G0;
                 currentCell.getMutationStatus().put(Mutations.NO_RESOURCES, false);
@@ -33,7 +35,8 @@ public class Checkpoint {
             if(currentCell.getMutationStatus().get(Mutations.CHROMOSOME_MISALIGNED)){
                 result = false;
             }
-        } else if(phase == Phases.G0){
+        }
+        if(phase == Phases.G0){
             int age = currentCell.getTracker().getAge();
             if(age >=90){
                 phase = Phases.G1;
