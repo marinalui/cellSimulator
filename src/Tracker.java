@@ -7,7 +7,7 @@ public class Tracker {
     //base cells constructor
     public Tracker(){
         Random rand = new Random();
-        age = rand.nextInt(0,61);
+        age = rand.nextInt(-1,61);
         ID = IDNum;
         IDNum += 1;
         cancerous = false;
