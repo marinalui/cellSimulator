@@ -13,6 +13,7 @@ public class Tissue {
     public void execute(int timePassed){
         ArrayList<Integer> idList = new ArrayList<Integer>();
         int parent_size = baseCells.size();
+
         for(int i=0;i<parent_size;i++){
 
             Cell currentCell = baseCells.get(i);
