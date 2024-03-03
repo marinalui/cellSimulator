@@ -25,8 +25,8 @@ public class Tissue {
                    idList.add(currentCell.getTracker().getID());
                    boolean cancer= currentCell.getTracker().getCancerous();
                    //base age is the beginning age of cell, if parent is over 60 when goes through mitosis
-                   baseCells.add(new Cell(cancer, currentCell.getMutationStatus(),(currentCell.getTracker().getAge())%50));
-                   baseCells.add(new Cell(cancer,currentCell.getMutationStatus(),(currentCell.getTracker().getAge())%50));
+                   baseCells.add(new Cell(cancer, currentCell.getMutationStatus(),(currentCell.getTracker().getAge())-50));
+                   baseCells.add(new Cell(cancer,currentCell.getMutationStatus(),(currentCell.getTracker().getAge())-50));
                }
             }
             else if(currentCell.getPhase()!=Phases.G0){
@@ -43,7 +43,7 @@ public class Tissue {
         for(int i=0; i<baseCells.size();i++){
             baseCells.get(i).display();
             System.out.print("   ");
-            if(i%4==0&&i!=0){
+            if((i+1)%5==0&&i!=0){
                 System.out.println();
             }
         }
