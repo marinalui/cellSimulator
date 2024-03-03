@@ -2,7 +2,8 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 /**
- *
+ *This file stores the functions and constructors of tissue, a collection of cells with trackers. This stores our main
+ * program which asks the user for main input
  *
  * @author Ashley
  * @author Marina
