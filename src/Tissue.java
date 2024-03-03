@@ -17,7 +17,7 @@ public class Tissue {
 
             Cell currentCell = baseCells.get(i);
 
-            //after the cell exeutes, if the cell is in mitosis
+            //after the cell executes, if the cell is in mitosis
             if(currentCell.execute(timePassed)){
                if(currentCell.getPhase()==Phases.M){
                    idList.add(currentCell.getTracker().getID());
@@ -25,12 +25,10 @@ public class Tissue {
                    baseCells.add(new Cell(cancer));
                    baseCells.add(new Cell(cancer));
                }
-
             }
             else{
                 idList.add(currentCell.getTracker().getID());
             }
-
         }
         for(Integer ridID: idList){
             baseCells.removeIf(n-> (n.getTracker().getID()==ridID));

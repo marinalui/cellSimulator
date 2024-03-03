@@ -1,6 +1,8 @@
+import java.util.*;
 public class Cell{
     private Tracker tracker;
     private Phases phase;
+    private HashMap<String, Boolean> mutationStatus = new HashMap<String, Boolean>();
 
     public Cell(){
         tracker = new Tracker();
@@ -27,7 +29,6 @@ public class Cell{
     public Phases getPhase(){
         return phase;
     }
-
     /**
      * updates the cells phase
      * @param time
