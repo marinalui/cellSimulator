@@ -2,7 +2,7 @@ import java.util.*;
 public class Cell{
     private Tracker tracker;
     private Phases phase;
-    private HashMap<String, Boolean> mutationStatus = new HashMap<String, Boolean>();
+    private HashMap<Checkpoint.Mutations, Boolean> mutationStatus = new HashMap<Checkpoint.Mutations, Boolean>();
 
     public Cell(){
         tracker = new Tracker();
@@ -29,6 +29,12 @@ public class Cell{
     public Phases getPhase(){
         return phase;
     }
+    public HashMap<Checkpoint.Mutations, Boolean> getMutationStatus(){
+        return mutationStatus;
+    }
+    public void updateMutationStatus(){
+        //for()
+    }
     /**
      * updates the cells phase
      * @param time
@@ -45,8 +51,6 @@ public class Cell{
                result = false;
            }
         }
-
-
         return result;
     }
 }
