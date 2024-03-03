@@ -22,9 +22,13 @@ public class Tissue {
                if(currentCell.getPhase()==Phases.M){
                    idList.add(currentCell.getTracker().getID());
                    boolean cancer= currentCell.getTracker().getCancerous();
-                   baseCells.add(new Cell(cancer, currentCell.getMutationStatus()));
-                   baseCells.add(new Cell(cancer,currentCell.getMutationStatus()));
+                   //base age is the beginning age of cell, if parent is over 60 when goes through mitosis
+                   baseCells.add(new Cell(cancer, currentCell.getMutationStatus(),(currentCell.getTracker().getAge())%50));
+                   baseCells.add(new Cell(cancer,currentCell.getMutationStatus(),(currentCell.getTracker().getAge())%50));
                }
+            }
+            else if(currentCell.getPhase()!=Phases.G0){
+                idList.add(currentCell.getTracker().getID());
             }
         }
         for(Integer ridID: idList){
@@ -43,6 +47,11 @@ public class Tissue {
         }
         System.out.print(System.lineSeparator());
         System.out.print(System.lineSeparator());
+
+        for(int i=0; i<baseCells.size();i++){
+            baseCells.get(i).display();
+            System.out.println("- Age:"+baseCells.get(i).getTracker().getAge());
+        }
     }
 
     public static void main(String[] args) {
@@ -52,17 +61,21 @@ public class Tissue {
         Tissue thisTissue = new Tissue(num);
         System.out.print("How much time has passed?: ");
         int time = in.nextInt();
+        //total rounds we will go through per enter
         double rounds = (double)time / 60;
-        /*how many full cycles have passed*/
+        /*how many full cycles we will pass*/
         int cycle = time / 60;
+        int curCycle=0;
 
+
+        thisTissue.display(curCycle);
         while (true) {
             System.out.println("‧͙⁺˚*･༓☾ LOOK AT THE MAGIC HAPPEN!!! ☽༓･*˚⁺‧͙");
-            thisTissue.display(cycle);
+
             for (int i = 0; i < cycle; i++) {
                 thisTissue.execute(60);
                 thisTissue.display(cycle);
-                thisTissue.display(cycle);
+                curCycle++;
             }
             if(cycle<rounds){
                 thisTissue.execute(time%60);

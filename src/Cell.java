@@ -11,8 +11,9 @@ public class Cell{
         mutationStatus.put(Checkpoint.Mutations.DNA_ERROR,false);
         mutationStatus.put(Checkpoint.Mutations.CHROMOSOME_MISALIGNED,false);
     }
-    public Cell(boolean cancerous, HashMap<Checkpoint.Mutations, Boolean> mutationStatus){
-        tracker = new Tracker(cancerous);
+    public Cell(boolean cancerous, HashMap<Checkpoint.Mutations, Boolean> mutationStatus,int baseAge){
+        //base age is the beginning age of cell, if parent is over 60 when goes through mitosis
+        tracker = new Tracker(cancerous,baseAge);
         determinePhase(tracker.getAge());
         this.mutationStatus = mutationStatus;
     }

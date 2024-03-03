@@ -13,8 +13,9 @@ public class Tracker {
         cancerous = false;
     }
     //daughter cells constructor
-    public Tracker(boolean cancerous){
-        age = 0;
+    public Tracker(boolean cancerous,int baseAge){
+        //base age is the beginning age of cell, if parent is over 60 when goes through mitosis
+        age = baseAge;
         ID = IDNum;
         IDNum += 1;
         this.cancerous = cancerous;
