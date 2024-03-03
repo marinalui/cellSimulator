@@ -53,6 +53,7 @@ public class Tissue {
         Tissue thisTissue = new Tissue(num);
         System.out.print("How much time has passed?: ");
         int time = in.nextInt();
+        double rounds = time / 60;
         /*how many full cycles have passed*/
         int cycle = time / 60;
         /*how many times the user has pressed enter*/
@@ -62,10 +63,11 @@ public class Tissue {
             thisTissue.display(curRounds,cycle);
             for (int i = 0; i < cycle; i++) {
                 curRounds++;
-                thisTissue.execute(time);
+                thisTissue.execute(60);
                 thisTissue.display(curRounds,cycle);
 
             }
+            if()
             System.out.println("To see the cells duplicate again, for the same amount of time, press any key.");
             System.out.print("If you want to exit, click [1] and press [Enter]");
             String close = in.next();
