@@ -16,7 +16,7 @@ public class Tissue {
         for(int i=0;i<parent_size;i++){
 
             Cell currentCell = baseCells.get(i);
-
+//
             //after the cell executes, if the cell is in mitosis
             if(currentCell.execute(timePassed)){
                if(currentCell.getPhase()==Phases.M){
