@@ -19,6 +19,7 @@ public class Tissue {
 //
             //after the cell executes, if the cell is in mitosis
             if(currentCell.execute(timePassed)){
+                //make this the mitosis funtcion until line 29
                if(currentCell.getPhase()==Phases.M){
                    idList.add(currentCell.getTracker().getID());
                    boolean cancer= currentCell.getTracker().getCancerous();
