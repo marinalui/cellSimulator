@@ -15,12 +15,20 @@ public class Checkpoint {
         this.currentCell = currentCell;
         phase = this.currentCell.getPhase();
         if (phase==Phases.G1){
-            //generate random number
+            if(currentCell.getMutationStatus().get(Mutations.NO_RESOURCES)){
+                return false;
+            }
 
             return true;
         } else if(phase==Phases.G2){
+            if(currentCell.getMutationStatus().get(Mutations.DNA_ERROR)){
+                return false;
+            }
             return true;
         } else if(phase == Phases.M){
+            if(currentCell.getMutationStatus().get(Mutations.CHROMOSONE_MISALIGNED)){
+                return false;
+            }
             return true;
         }
         else {return false;}

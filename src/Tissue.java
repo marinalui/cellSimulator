@@ -27,7 +27,9 @@ public class Tissue {
                }
             }
             else{
-                idList.add(currentCell.getTracker().getID());
+                if(currentCell.getPhase()==Phases.G0) {
+                    idList.add(currentCell.getTracker().getID());
+                }
             }
         }
         for(Integer ridID: idList){
