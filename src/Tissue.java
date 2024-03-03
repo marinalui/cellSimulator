@@ -59,11 +59,14 @@ public class Tissue {
         System.out.print("How much time has passed?: ");
         int time = in.nextInt();
         int rounds = time/60;
+
+        System.out.println("‧͙⁺˚*･༓☾ LOOK AT THE MAGIC HAPPEN!!! ☽༓･*˚⁺‧͙");
         thisTissue.display(0);
         for(int i=0;i<rounds;i++) {
             thisTissue.execute(time);
             thisTissue.display(rounds);
         }
+
 
     }
 

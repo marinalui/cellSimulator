@@ -75,12 +75,12 @@ public class Cell{
     public void display(){
 
         if (this.getTracker().getCancerous()) {
-            System.out.print("{C - "+ this.hashCode()+'}');
+            System.out.print("{C - "+ this.getTracker().getID()+'}');
 
         }
         else{
 
-            System.out.print("["+this.getPhase()+" - "+this.hashCode()+"]");
+            System.out.print("["+this.getPhase()+" - "+this.getTracker().getID()+"]");
         }
 
     }
