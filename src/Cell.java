@@ -39,6 +39,7 @@ public class Cell{
     public void updateMutationStatus(){
        for(Map.Entry<Checkpoint.Mutations, Boolean> set: mutationStatus.entrySet()){
            Random rand = new Random();
+           //can update with relevant chances of mutation in future development
            int chance1 = rand.nextInt(100);
            int chance2 = rand.nextInt(100);
            int chance3 = rand.nextInt(100);
@@ -67,6 +68,10 @@ public class Cell{
         if(previousPhase!= phase&& phase!=Phases.S){
            if (!checkpoint.test(this)){
                result = false;
+           } else if (checkpoint.test(this)&& mutationStatus.get(Checkpoint.Mutations.DNA_ERROR)){
+               getTracker().updateCancerous();
+           } else if(checkpoint.test(this)&& mutationStatus.get(Checkpoint.Mutations.CHROMOSOME_MISALIGNED)){
+               getTracker().updateCancerous();
            }
         }
         updateMutationStatus();

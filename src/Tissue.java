@@ -26,11 +26,6 @@ public class Tissue {
                    baseCells.add(new Cell(cancer,currentCell.getMutationStatus()));
                }
             }
-            else{
-                if(currentCell.getPhase()==Phases.G0) {
-                    idList.add(currentCell.getTracker().getID());
-                }
-            }
         }
         for(Integer ridID: idList){
             baseCells.removeIf(n-> (n.getTracker().getID()==ridID));
@@ -51,7 +46,6 @@ public class Tissue {
     }
 
     public static void main(String[] args) {
-
         Scanner in = new Scanner(System.in);
         System.out.print("How many base cells would you like?: ");
         int num = in.nextInt();
@@ -69,5 +63,4 @@ public class Tissue {
 
 
     }
-
 }
